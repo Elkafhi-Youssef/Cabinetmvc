@@ -10,6 +10,7 @@
         }
         //  function index call of all books
         public function index(){
+            // $this->loadView('admin'.DS.'doctors',[]);
             $this->loadView('admin'.DS.'doctors',[]);
 
         }

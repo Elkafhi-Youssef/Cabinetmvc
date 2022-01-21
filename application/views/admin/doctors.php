@@ -34,8 +34,8 @@
             <div class="doctor">
               <div class="doctor_info">
                   <img src= "<?php echo URLROOT.DS.'public/images/doctor2.png'; ?>" alt="doctor">
-                  <h4 class="full_name"><?php echo $data['fn_doctor'];?> </h4>
-                  <h4 class="speciality"><?php echo $data['type_Compence'];?></h4>
+                  <h4 class="full_name"><?= $data['fn_doctor'];?> </h4>
+                  <h4 class="speciality"><?= $data['type_Compence'];?></h4>
               </div>
               <div class="doctor_operation">
                   <a href="#" class="button edit"><span><i class="fas fa-user-edit"></i></span> </a>
@@ -81,15 +81,15 @@
       </div>
       <script>
        
-        var editPop =document.querySelectorAll(".doctor_operation .edit");
-        const popEdit =document.querySelector('.editPop')
-        const divsArr = Array.from(editPop);
-        divsArr.forEach( el =>{
-        el.addEventListener('click',(e)=>{
-                e.preventDefault();
-                popEdit.classList.add("showedit")
-            })
-        })
+        // var editPop =document.querySelectorAll(".doctor_operation .edit");
+        // const popEdit =document.querySelector('.editPop')
+        // const divsArr = Array.from(editPop);
+        // divsArr.forEach( el =>{
+        // el.addEventListener('click',(e)=>{
+        //         e.preventDefault();
+        //         popEdit.classList.add("showedit")
+        //     })
+        // })
     </script>
 </body>
 </html>

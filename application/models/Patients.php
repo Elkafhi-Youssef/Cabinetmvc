@@ -19,23 +19,29 @@
            $this->db->prepareQuery("DELETE FROM patient WHERE id_patient = ?");
            $this->db->execute([$id]);
         }
-        // filtered users
-        public function getUsersByFilter($table,$filter,$values){
-            $this->db->prepareQuery("SELECT * FROM $table WHERE $filter LIKE ?");
-            $this->db->execute(["%$values[0]%"]);
-            return $this->db->getResult();
+        public function getPatient($table ,$id){
+            $this->db->prepareQuery("SELECT * FROM $table where ?");
+            $this->db->bindValues([$id]);
+            $this->db->execute();
+            return $this->db->getRow(); 
         }
+        // // filtered users
+        // public function getUsersByFilter($table,$filter,$values){
+        //     $this->db->prepareQuery("SELECT * FROM $table WHERE $filter LIKE ?");
+        //     $this->db->execute(["%$values[0]%"]);
+        //     return $this->db->getResult();
+        // }
 
         
         // do command 
-        public function addComand($tablename,$attrs ,$values ){
-            return $this->db->insert($tablename,$attrs,$values);
-        }
+        // public function addComand($tablename,$attrs ,$values ){
+        //     return $this->db->insert($tablename,$attrs,$values);
+        // }
 
         //    function for insert info about new client 
-        public function register($tablename,$attrs ,$values ){
-            return $this->db->insert($tablename,$attrs,$values);
-        }
+        // public function register($tablename,$attrs ,$values ){
+        //     return $this->db->insert($tablename,$attrs,$values);
+        // }
 
         // start session 
         // public function startSession($sessionUser)

@@ -516,6 +516,7 @@
 }
 
 .pop {
+  border: 2px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -531,7 +532,6 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  display: none;
 }
 
 .pop form {
@@ -580,19 +580,6 @@
   margin-top: 20px;
 }
 
-.showedit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: #D1EBFC;
-  z-index: 999;
-}
-
 @media (max-width: 700px) {
   .pop form {
     width: 400px;
@@ -605,6 +592,26 @@
   }
   .pop form div label {
     margin: 10px 0;
+  }
+}
+
+.menu_1 {
+  display: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+  .menu_1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 10px;
+  }
+  .menu_1 span {
+    color: #0061FF;
   }
 }
 /*# sourceMappingURL=admin-patient.css.map */

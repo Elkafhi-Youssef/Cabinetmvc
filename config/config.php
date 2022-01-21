@@ -7,7 +7,7 @@
 
    // ROOT Directory
    define('ROOT', getcwd());
-  
+  echo ROOT;
    // Application path
    define('APPLICATION_PATH', ROOT.DS.'application');
    

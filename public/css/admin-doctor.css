@@ -514,4 +514,24 @@
     margin-top: 0px;
   }
 }
+
+.menu_1 {
+  display: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+  .menu_1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 10px;
+  }
+  .menu_1 span {
+    color: #0061FF;
+  }
+}
 /*# sourceMappingURL=admin-doctor.css.map */

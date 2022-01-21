@@ -23,5 +23,10 @@
            
             $this->redirect(URLROOT.'/AdminPatient/getAllPatients');
         } 
+        public function getPatient($id){
+            $data = $this->modelInstance->getPatient('patient' ,$id);
+            echo var_dump($data);
+            $this->loadView('admin'.DS.'editPatient',$data);
+        }
     }
 ?>
