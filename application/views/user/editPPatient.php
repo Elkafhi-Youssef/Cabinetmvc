@@ -1,15 +1,7 @@
-<?php require_once VIEWS_PATH.DS.'views.inc'.DS.'aside.php'; ?>
-<?php require_once VIEWS_PATH.DS.'views.inc'.DS.'nav.php';?>
- <!-- pop up edit -->
- <div class="menu_1 hamburger_menu">
- <span >
-                  <i class="fas fa-bars fa-3x"></i>
-              </span>
- </div>
- <?=$data['id_patient']; ?>
+<?php require_once VIEWS_PATH.DS.'views.inc'.DS.'user.nav.php';?>
 
- <div class="edit pop ">
-        <form action="<?= URLROOT.DS.'AdminPatient'.DS.'modifyPatient/'.$data['id_patient'] ?>" method="POST">
+<div style="margin-left: 0px;"  class="edit pop ">
+        <form action="<?= URLROOT.DS.'User'.DS.'modifyPatient/'.$data['id_patient'] ?>" method="POST">
           <div>
               <label>fullname :</label>
           <input type="text" value="<?php echo $data['fn_patient'];?>" name="fullname" id="fullname">
@@ -46,3 +38,12 @@
         </form>
       </div>
        
+
+
+
+
+
+
+
+
+<?php require_once VIEWS_PATH.DS.'views.inc'.DS.'user.footer.php';?>

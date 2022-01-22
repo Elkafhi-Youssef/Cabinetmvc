@@ -1,24 +1,23 @@
 <?php require_once VIEWS_PATH.DS.'views.inc'.DS.'user.nav.php';?>
-<div class="menu_1" >
+<!-- <div class="menu_1" >
     <span >
             <i class="fas fa-bars fa-3x"></i>
     </span>
-</div>
+</div> -->
+
 <div class="profile_container">
       <div class="media">
         <img src="<?= URLROOT.DS.'public'.DS.'images'.DS.'img'.DS.'doctor.svg';?>" alt="profile" />
         <div class="button">
-        
-          <button id="editBtn">Edit Info</button>
+        <a href="<?= URLROOT.DS.'User'.DS.'getDoctor/'.$data[0]['id_doctor']; ?>"><button id="editBtn">Edit Info</button></a>
+          
         </div>
       </div>
       <div class="info">
-        <h1>Ramon Ridwan</h1>
-        <h4>08/09/1999</h4>
-        <h3>Phone :</h3>
-        <h3>Address :</h3>
-        <h3>Email :</h3>
-        <h3>Amrad :</h3>
+        <h1><?=$data[0]['fn_doctor'];?></h1>
+        <h4><?=$data[0]['date_birth'];?></h4>
+        <h3><?=$data[0]['email_doctor'];?></h3>
+        <h3>specialete:<?=$data[0]['type_Compence'];?></h3>
       </div>
     </div>
 
@@ -69,25 +68,20 @@
                     <h3>Email</h3>
                     <h3>Descreption</h3>
                 </div>
-                <div>
-                    <form>
-                    <img alt="profil" src="<?= URLROOT.DS.'public'.DS.'images'.DS.'img'.DS.'patient1.svg';?>"></td>
-                    <h5>Roman Edward</h5>
-                    <h5>RomanEdward@gmail.com</h5>
-                    <button id="show" >Show Profile</button>
-                </form>
-                </div>
+                
                 
             </div>
             <div class="table">
+                <?php foreach($data[1] as $patients):?>
                 <div>
                     <form>
                     <img alt="profil" src="<?= URLROOT.DS.'public'.DS.'images'.DS.'img'.DS.'patient1.svg';?>"></td>
-                    <h5>Roman Edward</h5>
-                    <h5>RomanEdward@gmail.com</h5>
+                    <h5><?=$patients['fn_patient'];?></h5>
+                    <h5><?=$patients['email_patient'];?></h5>
                     <button>Show Profile</button>
                     </form>
                 </div>
+                <?php endforeach;  ?>
                 
             </div>
             

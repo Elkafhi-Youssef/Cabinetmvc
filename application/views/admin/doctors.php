@@ -38,7 +38,7 @@
                   <h4 class="speciality"><?= $data['type_Compence'];?></h4>
               </div>
               <div class="doctor_operation">
-                  <a href="#" class="button edit"><span><i class="fas fa-user-edit"></i></span> </a>
+                  <a href="<?= URLROOT.DS.'AdminDoctor'.DS.'getDoctor/'.$data['id_doctor']; ?>" class="button edit"><span><i class="fas fa-user-edit"></i></span> </a>
                   <a href="<?= URLROOT.DS.'AdminDoctor'.DS.'deleteDoctor/'.$data['id_doctor']; ?>" class="button"><span>
                   
                       <i class="fas fa-trash-alt"></i>
@@ -51,34 +51,7 @@
             
          </div>
       </section>
-      <!-- pop up edit -->
-      <div class="edit pop editPop">
-        <form>
-          <div>
-              <label>Phone :</label>
-          <input type="tel" name="phone" id="phone">
-          </div>
-          <div>
-              <label>Birthday :</label>
-              <input type="Date" name="date" id="date">
-          </div>
-          <div>
-              <label>Email :</label>
-              <input type="email" name="email" id="email">
-          </div>
-          <div>
-              <label>Address :</label>
-              <input type="text" name="address" id="address">
-          </div>
-          <div>
-              <label>
-             <img src="<?php echo URLROOT.DS.'public/images/doctor2.png'; ?>" alt=""></label>
-          </div>
-          <div class="button">
-            <button>Edit</button>
-          </div>
-        </form>
-      </div>
+     
       <script>
        
         // var editPop =document.querySelectorAll(".doctor_operation .edit");

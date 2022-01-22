@@ -42,6 +42,7 @@
                   <a href="<?= URLROOT.DS.'AdminPatient'.DS.'deletePatient/'.$data['id_patient']; ?>" class="button"><span>
                       <i class="fas fa-trash-alt"></i>
                   </span></a>
+                  
                   <a href="#" class="button"><span><i class="fas fa-eye"></i></span></a>
               </div>
             </div>

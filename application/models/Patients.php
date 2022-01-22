@@ -7,7 +7,7 @@
             $this->db = new Db();
         }
 
-        // Get all users
+        
         public function getAllPatients($table){
             $this->db->prepareQuery("SELECT * FROM $table");
             $this->db->execute();
@@ -19,38 +19,23 @@
            $this->db->prepareQuery("DELETE FROM patient WHERE id_patient = ?");
            $this->db->execute([$id]);
         }
-        public function getPatient($table ,$id){
-            $this->db->prepareQuery("SELECT * FROM $table where ?");
-            $this->db->bindValues([$id]);
-            $this->db->execute();
-            return $this->db->getRow(); 
+        public function getpatient($id){
+            $this->db->prepareQuery("SELECT * FROM patient where id_patient =?");
+            
+           $this->db->execute([$id]);
+             return  $this->db->getRow(); 
+            
         }
-        // // filtered users
-        // public function getUsersByFilter($table,$filter,$values){
-        //     $this->db->prepareQuery("SELECT * FROM $table WHERE $filter LIKE ?");
-        //     $this->db->execute(["%$values[0]%"]);
-        //     return $this->db->getResult();
-        // }
-
         
-        // do command 
-        // public function addComand($tablename,$attrs ,$values ){
-        //     return $this->db->insert($tablename,$attrs,$values);
-        // }
+        public function updatePatient($values0,$values1,$values2,$values3,$values4,$id){
+            $this->db->prepareQuery("UPDATE `patient` SET `fn_patient` = ?, `email_patient` = ?, `passwod` = ?, `date_birth` = ? ,`type_sickness`= ? WHERE `patient`.`id_patient` = ?");
+           $info = $this->db->execute([$values0,$values1,$values2,$values3,$values4,$id]);
+            if ($info){
+                return true;
+            }else{
+                return false;
+            }
+            
+        }
 
-        //    function for insert info about new client 
-        // public function register($tablename,$attrs ,$values ){
-        //     return $this->db->insert($tablename,$attrs,$values);
-        // }
-
-        // start session 
-        // public function startSession($sessionUser)
-        // {
-        //     session_start();
-        //     if (isset($startSession)){
-        //         return true;
-        //     }else{
-        //         return false;
-        //     }
-        // }
     }

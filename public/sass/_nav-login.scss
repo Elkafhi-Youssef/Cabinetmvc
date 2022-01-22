@@ -1,11 +1,10 @@
-.header_container{
+.header_container1{
    
     *{
         font-family: $primary-font;
     }
-    // height: 100vh;
+    
     background-color: $white-color;
-    margin-bottom: 20px;
     // border: 2px solid red;
     .logo_navbar{
         // border: 2px solid green;
@@ -46,19 +45,6 @@
                     }
                 }
             }
-        }
-        .info_user{
-            display: flex;
-            align-items: center;
-            img{
-                border-radius: 50%;
-            width: 40px;
-            object-fit: contain;
-        }
-        h6{
-            margin-left: 10px;
-            color: $third-color;
-        }
         }
     }
 

@@ -7,7 +7,10 @@ $background: $hawkes-blue;
 // Regular font family
 $font-family: 'Poppins', sans-serif;
 .pop{
-   border: 2px solid red;
+  
+   margin-top: 50px;
+   margin-left: 250px;
+   height: fit-content;
   @include flex(row, center, center, wrap);
   
   form{
@@ -55,15 +58,16 @@ $font-family: 'Poppins', sans-serif;
   // }
   @media (max-width: 700px){
     .pop{
+      margin-left: 30px;
     form{
-      width: 400px;
+      width: 95%;
       div{
       flex-direction: column;
         label{
           margin: 10px 0;
         }
         input,select,button{
-          
+          width: 90%;
         }
       }
   

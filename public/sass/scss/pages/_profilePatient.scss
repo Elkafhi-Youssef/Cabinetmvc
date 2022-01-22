@@ -88,10 +88,10 @@
 
 }
 .pop{
-  height: 100vh;
+ 
   @include flex(row, center, center, wrap);
   form{
-    width: 100vh;
+   
 
     div{
     @include flex(row,space-around, center, wrap);
@@ -124,6 +124,7 @@
 }
 @media (max-width: 700px){
   .pop{
+    height: fit-content;
   form{
     div{
     flex-direction: column;
@@ -141,7 +142,9 @@
 
 .planing_doc{
   box-sizing: border-box;
+  box-shadow:unset 0 -1px 3px $primary-color;
   // @include flex(column, center, stretch, nowrap);
+  border:2px solid red;
   .header_plan{
     @include flex(row,  space-around, center, nowrap);
   }

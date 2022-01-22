@@ -42,6 +42,7 @@
 		
 		public function prepareQuery($query){
 			$this->sth = $this->pdo->prepare($query);
+			
 		}	
 
 		/**

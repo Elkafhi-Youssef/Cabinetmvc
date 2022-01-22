@@ -174,7 +174,9 @@
 
 .content {
   margin-left: 250px;
-  height: 150vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-top: 90px;
   z-index: -1;
 }
@@ -516,7 +518,11 @@
 }
 
 .pop {
-  border: 2px solid red;
+  margin-top: 50px;
+  margin-left: 250px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -581,8 +587,11 @@
 }
 
 @media (max-width: 700px) {
+  .pop {
+    margin-left: 30px;
+  }
   .pop form {
-    width: 400px;
+    width: 95%;
   }
   .pop form div {
     -webkit-box-orient: vertical;
@@ -592,6 +601,9 @@
   }
   .pop form div label {
     margin: 10px 0;
+  }
+  .pop form div input, .pop form div select, .pop form div button {
+    width: 90%;
   }
 }
 
@@ -609,6 +621,7 @@
     display: -ms-flexbox;
     display: flex;
     margin-left: 10px;
+    margin-top: 100px;
   }
   .menu_1 span {
     color: #0061FF;

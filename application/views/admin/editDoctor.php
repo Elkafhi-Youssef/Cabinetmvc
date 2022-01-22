@@ -6,13 +6,13 @@
                   <i class="fas fa-bars fa-3x"></i>
               </span>
  </div>
- <?=$data['id_patient']; ?>
+ <?=$data['id_doctor']; ?>
 
  <div class="edit pop ">
-        <form action="<?= URLROOT.DS.'AdminPatient'.DS.'modifyPatient/'.$data['id_patient'] ?>" method="POST">
+        <form action="<?= URLROOT.DS.'AdminDoctor'.DS.'modifyDoctor/'.$data['id_doctor'] ?>" method="POST">
           <div>
               <label>fullname :</label>
-          <input type="text" value="<?php echo $data['fn_patient'];?>" name="fullname" id="fullname">
+          <input type="text" value="<?php echo $data['fn_doctor'];?>" name="fullname" id="fullname">
           </div>
           <div>
               <label>Birthday :</label>
@@ -20,15 +20,15 @@
           </div>
           <div>
               <label>Email :</label>
-              <input type="email"value="<?php echo $data['email_patient'];?>" name="gmail" id="email">
+              <input type="email"value="<?php echo $data['email_doctor'];?>" name="gmail" id="email">
           </div>
           <div>
               <label>password :</label>
               <input type="password" value="<?php echo $data['passwod'];?>" name="password" id="password">
           </div>
           <div>
-              <select style="margin-top: 20px;" value="" name="sickness" id="">
-                <option selected value="<?php echo $data['type_sickness'];?>"><?php echo $data['type_sickness'];?></option>
+              <select style="margin-top: 20px;" value="" name="Compence" id="">
+                <option selected value="<?php echo $data['type_Compence'];?>"><?php echo $data['type_Compence'];?></option>
                 <option value="sickness1">sickness1</option>
                 <option value="sickness2">sickness2</option>
                 <option value="sickness3">sickness3</option>

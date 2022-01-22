@@ -1,30 +1,23 @@
 
 <?php require_once VIEWS_PATH.DS.'views.inc'.DS.'user.nav.php';?>
-
-
-
-
-
 <div class="profile_container">
       <div class="media">
         <img src="<?php echo URLROOT.DS.'public/images/img/patient.png'; ?>" alt="profile" />
         
         <div class="button">
           <button id="reserveBtn">Reserve</button>
-          <button id="editBtn" >Edit Info</button>
+          <a href="<?= URLROOT.DS.'User'.DS.'getPatient/'.$data['id_patient']; ?>"><button id="editBtn">Edit Info</button></a>
         </div>
       </div>
       <div class="info">
-        <h1>Ramon Ridwan</h1>
-        <h4>08/09/1999</h4>
-        <h3>Phone :</h3>
-        <h3>Address :</h3>
-        <h3>Email :</h3>
-        <h3>Amrad :</h3>
+        <h1><?=$data['fn_patient'];?></h1>
+        <h4><?=$data['date_birth'];?></h4>
+        <h3>Email :<?=$data['email_patient'];?></h3>
+        <h3>sickness :<?=$data['type_sickness'];?></h3>
       </div>
     </div>
 
-    <div class="reserve pop">
+    <div style="display: none;" class="reserve pop">
         
       <form>
         <div>
@@ -73,36 +66,9 @@
         <img src="/assets/images/icon/close.png">
     </div>
     </div>
-      <div class="edit pop">
-       
-      <form>
-        <div>
-            <label>Phone :</label>
-        <input  class="vide"type="tel" name="phone" id="phone">
-        </div>
-        <div>
-            <label>Birthday :</label>
-            <input class="vide" type="Date" name="date" id="date">
-        </div>
-        <div>
-            <label>Email :</label>
-            <input class="vide" type="email" name="email" id="email">
-        </div>
-        <div>
-            <label>Address :</label>
-            <input class="vide" type="text" name="address" id="address">
-        </div>
-        <div>
-            <label>
-            <img src="/assets/images/icon/newimg.png" alt=""></label>
-        </div>
-        <div class="button">
-          <button class="valider" >valider</button>
-        </div>
-      </form>
-      <div class="close">
-        <img src="/assets/images/icon/close.png">
-    </div>
+      
+     
+      
     </div>
 
     <script>

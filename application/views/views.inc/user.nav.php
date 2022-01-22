@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="<?php echo URLROOT.DS.'public/css/index.css'; ?>">
         <link rel="stylesheet" href="<?php echo URLROOT.DS.'public/css/main.css'; ?>">
+        <link rel="stylesheet" href="<?php echo URLROOT.DS.'public/css/index.css'; ?>">
 
         
     </head>
@@ -16,11 +16,9 @@
                 <div class="logo">
                     <img src="<?php echo URLROOT.DS.'public/images/Cabinet_logo.png'; ?>" alt="cabinet">
                 </div>
-                <div class="nav_container">
-                    <ul class="links" id="links">
-                        <li><a href="singin.html">Sign In</a></li>
-                        <li><a href="singup.html">Sign Up</a></li>
-                    </ul>
+                <div class="info_user">
+                    <img src="<?=URLROOT.DS.'public/images/img_admin.png'; ?>" alt="image Patient doctor">
+                    <h6>youssef elafhi</h6>
                 </div>
             </div>
            
